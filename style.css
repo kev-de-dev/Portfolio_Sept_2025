@@ -1,0 +1,406 @@
+/* ================================
+   VARIABLES GLOBALES
+================================ */
+:root {
+  --beige: #f5f5dca5;
+  --blue-gray: #25303b;
+  --light-blue: #64b5f6;
+  --gold: #d4af37;
+  --mauve: #9370db;
+  --dark-bg: rgba(17, 17, 17, 0.9);
+  --soft-gray: #e0e0e0; /* nouvelle couleur douce pour le main */
+}
+
+/* ================================
+   RESET + BASE
+================================ */
+* {
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--beige);
+  width: 100%;
+  margin: 0;
+
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+  width: 100%;
+
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  background: #fff;
+}
+
+.header-position {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1170&auto=format&fit=crop")
+      center / cover no-repeat;
+  color: white;
+}
+
+header h1,
+header h2 {
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.header-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: var(--dark-bg);
+  text-align: center;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.bandeau {
+  width: 100%;
+  z-index: 10;
+  height: 15px;
+  background: #f7f7f7;
+  border-bottom: solid 2px var(--gold);
+}
+
+/* ================================
+   LOGO & BANNIÈRES
+================================ */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+.blue-banner {
+  background: url(https://www.solidaritetransport.fr/bundles/atosstifast/img/sky-blue-round-shape.svg)
+    no-repeat;
+  width: 55%;
+  height: 100%;
+  border-bottom-left-radius: 50rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.black-banner-1 {
+  background: url(https://www.solidaritetransport.fr/bundles/atosstifast/img/navy-geometric-shape.svg)
+    no-repeat 100% 0;
+  width: 105%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -5%;
+  z-index: 1;
+  pointer-events: none;
+}
+/* ================================
+   NAVIGATION
+================================ */
+nav {
+  position: relative;
+  width: auto;
+  height: 90px;
+  background-color: var(--blue-gray);
+  margin-right: 240px;
+  margin-left: 0;
+}
+nav section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav section a {
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding: 8px 12px;
+  color: var(--soft-gray);
+  transition: text-shadow 0.3s;
+}
+
+nav a:hover {
+  padding: 6px;
+  outline: 2px solid;
+  outline-offset: 4px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--gol);
+
+  background: var(--beige);
+  color: var(--blue-gray);
+
+  transition: all 0.3s ease-in-out;
+}
+.btn-cv {
+  background-color: var(--gold);
+  color: var(--blue-gray);
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.banner-gold {
+  background-color: var(--gold);
+  color: var(--blue-gray);
+  padding: 0.25rem;
+  font-weight: bold;
+}
+
+/* ================================
+   BANNER / CAROUSEL
+================================ */
+#banner {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-top: var(--beige) 1px solid;
+  border-bottom: var(--beige) 2px solid;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slider img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider img.active {
+  opacity: 1;
+  position: relative;
+}
+
+.slider .precedent,
+.slider .suivant {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: var(--light-blue);
+  z-index: 10;
+  transition: color 0.3s;
+}
+
+.slider .precedent:hover,
+.slider .suivant:hover {
+  text-shadow: 0 0 10px var(--gold);
+}
+
+.slider .precedent {
+  left: 1rem;
+}
+
+.slider .suivant {
+  right: 1rem;
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid #a9a3a3;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dot_selected {
+  background-color: var(--blue-gray);
+}
+
+#banner p {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 3.1rem);
+  line-height: 1.3;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: justify;
+  color: var(--blue-gray);
+  margin-left: 12px;
+}
+
+#banner span {
+  display: block;
+  font-weight: 400;
+  font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+main {
+  background: var(--blue-gray);
+  color: var(--beige);
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5rem auto;
+  background: var(--dark-bg);
+
+  padding: 2rem;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.main-container section {
+  flex: 1 1 18rem;
+  background: var(--beige);
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.main-container section:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tech-support {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: var(--soft-gray);
+  text-align: center;
+}
+main h2 {
+  font-size: 1.5rem; /* Agrandit les titres principaux */
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, var(--gold), var(--beige)) 1;
+  padding-left: 1rem;
+  border-radius: 2px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  color: var(--soft-gray);
+}
+
+main p {
+  font-size: 1.25rem; /* Agrandit le texte des paragraphes */
+  line-height: 1.6; /* Améliore la lisibilité */
+}
+main li {
+  list-style: none; /* Supprime les puces par défaut */
+  font-size: 1.1rem; /* Agrandit le texte des listes */
+  margin-bottom: 0.5rem;
+  line-height: 1.4; /* Améliore la lisibilité */
+}
+/* ================================
+   ICON LIST
+================================ */
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  height: 42vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  background: url("./Asset/img/KB Dev.png") center / cover no-repeat;
+  border-top: 3px solid var(--gold);
+  color: white;
+}
+
+footer a {
+  color: var(--beige);
+  font-weight: 600;
+  transition: color 0.3s;
+  font-size: large;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */

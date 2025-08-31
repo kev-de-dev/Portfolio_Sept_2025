@@ -1,0 +1,44 @@
+.pc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.screen {
+  width: 100vh;
+  height: 50vh;
+  background: var(--blue-dark);
+  border-radius: 2vh;
+  border: 1vh solid #dcdcdc;
+  border-bottom-width: 8vh;
+  border-top-color: #a6a6ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.75em 1.5em rgba(0, 0, 0, 0.7);
+}
+
+.screen-content {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--beige);
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.stand,
+.keyboard {
+  border-radius: 5px;
+  background: linear-gradient(180deg, #f8f8f8, #d6d6d6 50%, #f0f0f0);
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+}
+
+.stand {
+  width: 10vh;
+  height: 8vh;
+}
+.keyboard {
+  width: 40vh;
+  height: 1.5vh;
+}

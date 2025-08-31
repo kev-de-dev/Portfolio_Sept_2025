@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Kevin Bossu</title>
+    <!-- Icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button/button.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="bandeau" aria-hidden="true"></div>
+
+      <section class="header-position">
+        <div class="blue-banner"></div>
+        <div class="logo">
+          <h1>Kevin Bossu</h1>
+        </div>
+        <div class="header-subtitle">
+          <h2>Technicien informatique & Développeur web</h2>
+        </div>
+
+        <nav aria-label="Navigation principale">
+          <div class="black-banner-1" aria-hidden="true"></div>
+          <section>
+            <ul class="menu">
+              <li><a href="#about">À propos</a></li>
+              <li><a href="#it-skills">Compétences IT</a></li>
+              <li><a href="#dev-skills">Développement</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </section>
+        </nav>
+        <a
+          class="btn-cv"
+          href="./Asset/cv/Kevin Bossu Cv Aout 2025.pdf"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Télécharger mon CV"
+          download
+        >
+          <i class="fas fa-download"></i> Télécharger mon CV
+        </a>
+      </section>
+    </header>
+
+    <!-- BANNER / CAROUSEL -->
+    <div id="banner">
+      <div class="slider">
+        <div class="carousel">
+          <img
+            class="banner-img img__slider active"
+            src="./Asset/img/ticket-system-helpdesk.png"
+            alt="Capture d'écran du système Helpdesk"
+            width="300"
+            height="200"
+          />
+          <img
+            class="banner-img img__slider"
+            src="./Asset/img/Office_365.jpg"
+            alt="Capture d'écran de Microsoft Office 365"
+            width="300"
+            height="200"
+          />
+          <img
+            class="banner-img img__slider"
+            src="./Asset/img/activedirectory.webp"
+            alt="Capture d'écran d'Active Directory"
+            width="300"
+            height="200"
+          />
+          <img
+            class="banner-img img__slider"
+            src="./Asset/img/slide-sccm.jpg"
+            alt="Capture d'écran de gestion SCCM"
+            width="300"
+            height="200"
+          />
+          <img
+            class="banner-img img__slider"
+            src="./Asset/img/backlog.webp"
+            alt="Capture d'écran de gestion de backlog"
+            width="300"
+            height="200"
+          />
+          <p id="tagline"></p>
+        </div>
+
+        <!-- Carousel Arrows -->
+        <div class="chevron suivant">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="chevron precedent">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+      </div>
+
+      <!-- Carousel dots -->
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>À propos</h2>
+        <p>
+          Technicien informatique spécialisé dans le
+          <strong>support IT</strong> et compétent en
+          <strong>développement web</strong>, combinant assistance utilisateur,
+          gestion informatique et création d’outils numériques pour garantir un
+          support de qualité, la continuité et la sécurité IT.
+        </p>
+        <p>
+          Expérimenté dans des environnements exigeants, j’assiste les managers
+          et le personnel technique dans les besoins informatiques quotidiens
+          (matériel, réseau, logiciels) tout en développant des solutions
+          pratiques pour optimiser les flux de travail.
+        </p>
+        <p>
+          Passionné par la technologie et l’innovation, je m’efforce de
+          maintenir mes compétences à jour pour offrir un support efficace et
+          contribuer au succès des projets IT.
+        </p>
+      </section>
+
+      <!-- IT SKILLS -->
+      <section id="it-skills">
+        <h2>Compétences IT 💻</h2>
+        <ul>
+          <li>Support et assistance utilisateur</li>
+          <li>
+            Diagnostic matériel et logiciel, maintenance PC, imprimantes et
+            mobiles
+          </li>
+          <li>
+            Gestion des permissions et GPO (Active Directory, Intune, AS400)
+          </li>
+          <li>Gestion des actifs IT (SCCM)</li>
+          <li>Sécurité des données, sauvegardes, mises à jour</li>
+          <li>Gestion réseau (TCP/IP, DNS, panneaux de brassage)</li>
+          <li>Salles de réunion Teams</li>
+          <li>Création de documentation et guides utilisateurs</li>
+        </ul>
+
+        <ul class="icon-list">
+          <li>
+            <i class="fas fa-file-alt" aria-hidden="true"></i> Microsoft Office
+            (2007 à 365)
+          </li>
+          <li>
+            <i class="fab fa-windows" aria-hidden="true"></i> Windows (Vista à
+            11, Server 2008)
+          </li>
+          <li><i class="fas fa-rocket" aria-hidden="true"></i> Déploiement</li>
+          <li>
+            <i class="fas fa-exchange-alt" aria-hidden="true"></i> Migration
+            système
+          </li>
+          <li>
+            <i class="fas fa-sitemap" aria-hidden="true"></i> Active Directory
+          </li>
+          <li><i class="fas fa-server"></i> Serveurs</li>
+          <li><i class="fas fa-cloud"></i> Cloud</li>
+          <li><i class="fas fa-lock" aria-hidden="true"></i> GPO</li>
+          <li>
+            <i class="fas fa-download"></i> Installation logiciels et matériels
+          </li>
+          <li><i class="fas fa-network-wired"></i> Configuration réseau</li>
+          <li>
+            <i class="fas fa-tools"></i> Gestion et diagnostic parc informatique
+          </li>
+          <li><i class="fas fa-hdd"></i> Gestion des sauvegardes</li>
+          <li><i class="fas fa-cogs"></i> Maintenance IT</li>
+        </ul>
+      </section>
+
+      <!-- TECH SUPPORT -->
+      <section class="tech-support">
+        <h3>Support technique</h3>
+        <p>
+          Expérimenté dans l’assistance utilisateur, la gestion proactive des
+          incidents et la formation.
+        </p>
+        <p>
+          Formation des utilisateurs sur les outils et les bonnes pratiques avec
+          un accent sur le service client.
+        </p>
+        <ul class="icon-list">
+          <li>
+            <i class="fas fa-bug" aria-hidden="true"></i> Gestion proactive des
+            incidents
+          </li>
+          <li>
+            <i class="fas fa-user-friends" aria-hidden="true"></i> Interaction
+            utilisateur
+          </li>
+          <li>
+            <i class="fas fa-headset" aria-hidden="true"></i> Service client
+          </li>
+          <li>
+            <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+            Formation et pédagogie
+          </li>
+        </ul>
+      </section>
+
+      <!-- DEVELOPMENT -->
+      <section id="dev-skills">
+        <h2>Compétences en développement</h2>
+        <ul>
+          <li>
+            Création et maintenance de sites web et applications (HTML, CSS,
+            Tailwind, Sass, JS)
+          </li>
+          <li>Développement d’outils IT internes</li>
+          <li>Gestion et exploitation de bases de données</li>
+        </ul>
+        <ul class="icon-list">
+          <li><i class="fab fa-html5" aria-hidden="true"></i> HTML</li>
+          <li><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS</li>
+          <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
+          <li><i class="fab fa-sass" aria-hidden="true"></i> Sass</li>
+          <li><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</li>
+          <li>
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i> Responsive
+          </li>
+        </ul>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2>Projets</h2>
+        <p>
+          💻 Exemple : Site vitrine personnel (HTML + CSS, palette
+          personnalisée)
+        </p>
+        <ul>
+          <li>
+            <i class="fas fa-robot" aria-hidden="true"></i> Développement de web
+            bots - MajorBot
+          </li>
+          <li>
+            <i class="fas fa-cogs" aria-hidden="true"></i> Automatisation des
+            processus
+          </li>
+        </ul>
+      </section>
+
+      <!-- OBJECTIVE -->
+      <section id="objective">
+        <h2>Objectif</h2>
+        <p>
+          Rejoindre l’UMR8538 (ENS, Laboratoire de Géologie) pour fournir un
+          <strong>support IT</strong>, maintenir un
+          <strong>environnement numérique fiable</strong> et contribuer au
+          développement d’outils adaptés aux besoins des utilisateurs.
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <section id="contact">
+        <div>
+          📧 <a href="mailto:kevin.bossu@orange.fr">Mail</a> 🔗
+          <a
+            href="https://www.linkedin.com/in/kevin-bossu-78a46893/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          |
+          <a
+            href="https://github.com/kev-de-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </section>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+      fetch("button/button.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("button-container").innerHTML = html;
+        });
+    </script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/04/14/20250104141027-PNQ66JTF.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
