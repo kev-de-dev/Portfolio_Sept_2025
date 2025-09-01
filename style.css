@@ -23,6 +23,8 @@
 body {
   color: var(--beige);
   width: 100%;
+
+  overflow-x: hidden;
   margin: 0;
 
   font-family: "Segoe UI", Roboto, sans-serif;
@@ -40,6 +42,7 @@ header {
 }
 
 .header-position {
+  position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1170&auto=format&fit=crop")
       center / cover no-repeat;
@@ -84,10 +87,14 @@ header h2 {
    LOGO & BANNIÈRES
 ================================ */
 .logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+
+margin-left: 25px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--beige);
+  text-shadow: 0 0 5px var(--blue-gray);
   z-index: 10;
+  position: relative;
 }
 .blue-banner {
   background: url(https://www.solidaritetransport.fr/bundles/atosstifast/img/sky-blue-round-shape.svg)
@@ -336,7 +343,7 @@ main section {
   text-align: center;
 }
 main h2 {
-  font-size: 1.5rem; /* Agrandit les titres principaux */
+  font-size: 1.5rem; 
   margin-bottom: 1rem;
   border-left: 4px solid;
   border-image: linear-gradient(to bottom, var(--gold), var(--beige)) 1;
@@ -347,14 +354,14 @@ main h2 {
 }
 
 main p {
-  font-size: 1.25rem; /* Agrandit le texte des paragraphes */
-  line-height: 1.6; /* Améliore la lisibilité */
+  font-size: 1.25rem; 
+  line-height: 1.6; 
 }
 main li {
-  list-style: none; /* Supprime les puces par défaut */
-  font-size: 1.1rem; /* Agrandit le texte des listes */
+  list-style: none; 
+  font-size: 1.1rem; 
   margin-bottom: 0.5rem;
-  line-height: 1.4; /* Améliore la lisibilité */
+  line-height: 1.4;
 }
 /* ================================
    ICON LIST
@@ -404,3 +411,80 @@ footer a:hover {
 /* ================================
    RESPONSIVE
 ================================ */
+/* Desktop : à partir de 1350px */
+@media (min-width: 1350px) {
+ 
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+
+  nav {
+    margin-right: 240px;
+    width: auto;
+    height: 90px;
+  }
+
+  nav ul.menu {
+    flex-direction: row;  /* vertical → horizontal pour desktop */
+    gap: 2.5rem;
+    align-items: center;
+    width: auto;
+  }
+
+  .btn-cv {
+    margin: 1rem;
+    display: inline-block;
+  }
+}
+
+/* Mobile / tablette : en dessous de 1350px */
+@media (max-width: 1349px) {
+  .header-position {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0 1rem 0;
+  }
+
+  .logo {
+    position: static;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+.header-subtitle {
+    align-items: center;
+    margin: 0;
+    font-size: 1rem;
+        color: white;
+    text-shadow: 0 0 5px var(--blue-gray);
+  }
+  .black-banner-1, .blue-banner {
+    display: none;
+  }
+
+
+  nav {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 2px;
+  }
+
+  nav ul.menu {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .btn-cv {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    width: fit-content;
+  }
+}
