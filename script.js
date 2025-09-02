@@ -6,7 +6,7 @@ const slides = [
   {
     image: "slide1.jpg",
     //  image: "slide.jpg", =Chemin de l'image associée à cette diapositive.
-    tagLine: "plus de 10 ans d'éperiences<span>en Support Technique</span>",
+    tagLine: "plus de 10 ans d'éxperiences<span>en Support Technique</span>",
     // propriétés :Tagline
   },
   {
@@ -28,8 +28,8 @@ const slides = [
 ];
 
 ///////////////////////////////   const = document.querySelectorAll('.');  ///////////////////////////////////////////////
-
-const imgSlider = document.querySelectorAll(".img__slider"); //<img class="banner-img img__slider"
+const imgSlider = document.querySelectorAll("#banner .img__slider");
+//<img class="banner-img img__slider"
 // Sélectionne toutes les images du carrousel
 
 //  sélectionne tous les points de navigation (dots) en utilisant la classe CSS '.dot'
@@ -61,12 +61,12 @@ let currentSlideIndex = 0;
 
 // Gestion du clic sur le bouton "précédent"
 if (previousButton) {
-  previousButton.addEventListener("click", () => handleCarousel(1));
+  previousButton.addEventListener("click", () => handleCarousel(-1));
 }
 
 // Gestion du clic sur le bouton "suivant"
 if (nextButton) {
-  nextButton.addEventListener("click", () => handleCarousel(-1));
+  nextButton.addEventListener("click", () => handleCarousel(+1));
 }
 
 function removeActiveImages() {
@@ -79,7 +79,7 @@ function removeActiveDots() {
   dots.forEach((dot) => dot.classList.remove("dot_selected"));
 }
 
-// Fonction pour gérer le carrousel en fonction de la direction (1 pour le suivant, -1 pour le précédent)
+// Fonction pour gérer le carrousel en fonction de la direction (-1 pour le suivant, +1 pour le précédent)
 function handleCarousel(slideDirection) {
   // On met à jour l'index de la diapositive actuellement affichée en fonction de la direction
   currentSlideIndex += slideDirection;
@@ -121,7 +121,7 @@ function handleCarousel(slideDirection) {
 function autoCarousel() {
   handleCarousel(1);
 }
-// Démarrer le carrousel automatique en appelant la fonction autoCarousel() toutes les 3500 millisecondes
-setInterval(autoCarousel, 5500);
+// Démarrer le carrousel automatique en appelant la fonction autoCarousel() toutes les 5500 millisecondes
+setInterval(autoCarousel, 4500);
 // Appeler handleCarousel au chargement de la page pour afficher le tagline de la première diapositive
 handleCarousel(0);
