@@ -8,7 +8,8 @@
   --gold: #d4af37;
   --mauve: #9370db;
   --dark-bg: rgba(17, 17, 17, 0.9);
-  --soft-gray: #e0e0e0; /* nouvelle couleur douce pour le main */
+  --soft-gray: #e0e0e0;
+  --blanc: #ffffff;
 }
 
 /* ================================
@@ -46,7 +47,6 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1170&auto=format&fit=crop")
       center / cover no-repeat;
-  color: white;
 }
 
 header h1,
@@ -87,8 +87,7 @@ header h2 {
    LOGO & BANNIÈRES
 ================================ */
 .logo {
-
-margin-left: 25px;
+  margin-left: 25px;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--beige);
@@ -181,7 +180,11 @@ nav a:hover {
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 }
-
+.btn-cv:hover {
+  background-color: var(--blanc);
+  color: var(--gold);
+  box-shadow: 0 0 10px var(--gold);
+}
 .banner-gold {
   background-color: var(--gold);
   color: var(--blue-gray);
@@ -194,7 +197,7 @@ nav a:hover {
 ================================ */
 #banner {
   width: 100%;
-  margin: 0 auto;
+  margin: 1rem;
   position: relative;
   overflow: hidden;
   border-top: var(--beige) 1px solid;
@@ -275,12 +278,39 @@ nav a:hover {
 #banner p {
   font-family: "Roboto Slab", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.5rem, 5vw, 3.1rem);
-  line-height: 1.3;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  text-align: justify;
-  color: var(--blue-gray);
-  margin-left: 12px;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.4;
+  text-align: center; /* + lisible au centre */
+  color: var(--blanc);
+
+  /* Effet dégradé dans le texte */
+  background: linear-gradient(
+    90deg,
+    var(--light-blue),
+    var(--dark-bg),
+    var(--blue-gray)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Légère animation au chargement */
+  animation: fadeInUp 1s ease-out;
+
+  /* Marges plus équilibrées */
+  margin: 2.5rem auto;
+  max-width: 800px;
+}
+
+/* Animation moderne (entrée en fondu + glissement vers le haut) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #banner span {
@@ -339,27 +369,25 @@ main section {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  color: var(--soft-gray);
   text-align: center;
 }
 main h2 {
-  font-size: 1.5rem; 
+  font-size: 1.75rem;
   margin-bottom: 1rem;
   border-left: 4px solid;
   border-image: linear-gradient(to bottom, var(--gold), var(--beige)) 1;
   padding-left: 1rem;
   border-radius: 2px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-  color: var(--soft-gray);
 }
 
 main p {
-  font-size: 1.25rem; 
-  line-height: 1.6; 
+  font-size: 1.5rem;
+  line-height: 1.6;
 }
 main li {
-  list-style: none; 
-  font-size: 1.1rem; 
+  list-style: none;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
   line-height: 1.4;
 }
@@ -381,10 +409,88 @@ main li {
   gap: 0.5rem;
   font-size: 1.1rem;
 }
+/* ================================
+   Aside
+================================ */
+
+aside {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--blue-gray);
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+aside h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+
+  padding-left: 1rem;
+}
+
+aside section {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.portfolio {
+  padding-left: 30%;
+  padding-right: 30%;
+  margin: 1.5rem auto;
+  gap: 1rem;
+}
+.card {
+  width: 45%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card-img:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  border: 3px solid var(--gold);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+aside p {
+  font-size: 1rem;
+  color: var(--gold);
+  background-color: var(--blue-gray);
+  padding: 0.8rem 1rem;
+  border: 3px solid var(--gold);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+  max-width: 600px;
+  text-align: center;
+  font-style: italic;
+}
 
 /* ================================
    FOOTER
 ================================ */
+
 footer {
   height: 42vh;
   display: flex;
@@ -397,11 +503,11 @@ footer {
   color: white;
 }
 
-footer a {
+footer {
   color: var(--beige);
   font-weight: 600;
   transition: color 0.3s;
-  font-size: large;
+  font-size: 25px;
 }
 
 footer a:hover {
@@ -413,15 +519,13 @@ footer a:hover {
 ================================ */
 /* Desktop : à partir de 1350px */
 @media (min-width: 1350px) {
- 
   .logo {
     position: absolute;
-    top: 20px;
+
     left: 20px;
     margin-bottom: 0;
     text-align: left;
   }
-
 
   nav {
     margin-right: 240px;
@@ -430,7 +534,7 @@ footer a:hover {
   }
 
   nav ul.menu {
-    flex-direction: row;  /* vertical → horizontal pour desktop */
+    flex-direction: row; /* vertical → horizontal pour desktop */
     gap: 2.5rem;
     align-items: center;
     width: auto;
@@ -448,7 +552,6 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 2rem 0 1rem 0;
   }
 
   .logo {
@@ -456,17 +559,17 @@ footer a:hover {
     margin-bottom: 1rem;
     text-align: center;
   }
-.header-subtitle {
+  .header-subtitle {
     align-items: center;
     margin: 0;
     font-size: 1rem;
-        color: white;
+    color: white;
     text-shadow: 0 0 5px var(--blue-gray);
   }
-  .black-banner-1, .blue-banner {
+  .black-banner-1,
+  .blue-banner {
     display: none;
   }
-
 
   nav {
     margin: 0;
