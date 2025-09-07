@@ -36,6 +36,10 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -56,10 +60,10 @@
       <section class="header-position">
         <div class="blue-banner"></div>
         <div class="logo">
-          <h1>Kevin Bossu</h1>
+          <h1 data-aos="zoom-in">Kevin Bossu</h1>
         </div>
         <div class="header-subtitle">
-          <h2>Tech IT & DEV</h2>
+          <h2 data-aos="fade-down">Tech IT & DEV</h2>
         </div>
 
         <nav aria-label="Navigation principale">
@@ -141,6 +145,7 @@
     <main>
       <a
         class="btn-cv"
+        data-aos="zoom-in"
         href="./Asset/cv/Kevin Bossu Cv Aout 2025.pdf"
         target="_blank"
         rel="noreferrer"
@@ -150,7 +155,7 @@
         <i class="fas fa-download"></i> Télécharger mon CV
       </a>
       <!-- ABOUT -->
-      <section id="about">
+      <section id="about" data-aos="fade-left">
         <h2>À propos</h2>
         <p>
           Technicien informatique spécialisé dans le
@@ -173,7 +178,7 @@
       </section>
 
       <!-- IT SKILLS -->
-      <section id="it-skills">
+      <section id="it-skills" data-aos="flip-down">
         <h2>Compétences IT 💻</h2>
         <ul>
           <li>Support et assistance utilisateur</li>
@@ -191,7 +196,7 @@
           <li>Création de documentation et guides utilisateurs</li>
         </ul>
 
-        <ul class="icon-list">
+        <ul class="icon-list" data-aos="flip-down">
           <li>
             <i class="fas fa-file-alt" aria-hidden="true"></i> Microsoft Office
             (2007 à 365)
@@ -224,7 +229,7 @@
       </section>
 
       <!-- TECH SUPPORT -->
-      <section class="tech-support">
+      <section class="tech-support" data-aos="fade-left">
         <h3>Support technique</h3>
         <p>
           Expérimenté dans l’assistance utilisateur, la gestion proactive des
@@ -254,7 +259,7 @@
       </section>
 
       <!-- DEVELOPMENT -->
-      <section id="dev-skills">
+      <section id="dev-skills" data-aos="flip-up">
         <h2>Compétences en développement</h2>
         <ul>
           <li>
@@ -262,9 +267,9 @@
             Tailwind, Sass, JS)
           </li>
           <li>Développement d’outils IT internes</li>
-          <li>Gestion et exploitation de bases de données</li>
+          <li>Responsive Disgn</li>
         </ul>
-        <ul class="icon-list">
+        <ul class="icon-list" data-aos="flip-down">
           <li><i class="fab fa-html5" aria-hidden="true"></i> HTML</li>
           <li><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS</li>
           <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
@@ -294,24 +299,15 @@
           </li>
         </ul>
       </section>
-
-      <!-- OBJECTIVE -->
-      <section id="objective">
-        <h2>Objectif</h2>
-        <p>
-          Rejoindre l’UMR8538 (ENS, Laboratoire de Géologie) pour fournir un
-          <strong>support IT</strong>, maintenir un
-          <strong>environnement numérique fiable</strong> et contribuer au
-          développement d’outils adaptés aux besoins des utilisateurs.
-        </p>
-      </section>
     </main>
     <aside>
       <h3>Mon Portfolio</h3>
       <section class="portfolio">
-        <div class="card">
-          <div>
-            <a href="https://kev-de-dev.github.io/Print-it-JS/"
+        <div class="card" data-aos="fade-down-right">
+          <div data-aos="fade-down">
+            <a
+              href="https://kev-de-dev.github.io/Print-it-JS/"
+              data-aos="zoom-in"
               ><p>Print it</p></a
             >
           </div>
@@ -321,9 +317,13 @@
             alt="Capture d'écran du site web Print-it"
           />
         </div>
-        <div class="card">
-          <div>
-            <a href="https://kev-de-dev.github.io/Print-it-JS/"><p>Booki</p></a>
+        <div class="card" data-aos="fade-down-left">
+          <div data-aos="fade-down">
+            <a
+              href="https://kev-de-dev.github.io/Print-it-JS/"
+              data-aos="zoom-in"
+              ><p>Booki</p></a
+            >
           </div>
           <img
             class="banner-img img__slider active"
@@ -331,9 +331,11 @@
             alt="Capture d'écran du site web Booki"
           />
         </div>
-        <div class="card">
-          <div>
-            <a href="https://kev-de-dev.github.io/Print-it-JS/"
+        <div class="card" data-aos="fade-up-right">
+          <div data-aos="fade-up">
+            <a
+              href="https://kev-de-dev.github.io/Print-it-JS/"
+              data-aos="zoom-in"
               ><p>OhmyFood</p></a
             >
           </div>
@@ -343,9 +345,11 @@
             alt="Capture d'écran du site web OhmyFood"
           />
         </div>
-        <div class="card">
-          <div>
-            <a href="https://kev-de-dev.github.io/Print-it-JS/"
+        <div class="card" data-aos="fade-up-left">
+          <div data-aos="fade-up">
+            <a
+              href="https://kev-de-dev.github.io/Print-it-JS/"
+              data-aos="zoom-in"
               ><p>Riding Cities</p></a
             >
           </div>
@@ -358,7 +362,7 @@
       </section>
     </aside>
     <!-- FOOTER -->
-    <footer>
+    <footer data-aos="flip-up">
       <section id="contact">
         <div>
           📧 <a href="mailto:kevin.bossu@orange.fr">Mail</a> 🔗
@@ -380,12 +384,22 @@
     </footer>
 
     <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script>
-      fetch("button/button.html")
-        .then((res) => res.text())
-        .then((html) => {
-          document.getElementById("button-container").innerHTML = html;
-        });
+      AOS.init({
+        duration: 1200,
+
+        once: false,
+
+        offset: 100,
+
+        anchorPlacement: "top-bottom",
+
+        easing: "ease-in-out",
+
+        delay: 100,
+      });
     </script>
 
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
