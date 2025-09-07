@@ -97,13 +97,25 @@ header h2 {
 }
 .blue-banner {
   background: url(./Asset/img/portfolio/blue-banner.svg) no-repeat;
-  width: 55%;
+  width: 0%; /* commence à 0 pour l'animation */
   height: 100%;
   border-bottom-left-radius: 50rem;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 0;
+
+  /* Animation */
+  animation: expandBanner 1.5s ease-out forwards;
+}
+
+@keyframes expandBanner {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 55%; /* La largeur finale */
+  }
 }
 
 .black-banner-1 {
@@ -162,9 +174,9 @@ nav a:hover {
   outline: 2px solid;
   outline-offset: 4px;
   border-radius: 15px;
-  box-shadow: 0 0 10px var(--gol);
+  box-shadow: 0 0 10px var(--gold);
 
-  background: var(--beige);
+  background: var(--gold);
   color: var(--blue-gray);
 
   transition: all 0.3s ease-in-out;
