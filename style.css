@@ -2,9 +2,9 @@
    VARIABLES GLOBALES
 ================================ */
 :root {
-  --beige: #f5f5dca5;
+  --beige: #f5f5dcec;
   --blue-gray: #25303b;
-  --light-blue: #64b5f6;
+  --light-blue: #325e81c5;
   --gold: #d4af37;
   --mauve: #9370db;
   --dark-bg: rgba(17, 17, 17, 0.9);
@@ -224,7 +224,7 @@ nav a:hover {
 ================================ */
 #banner {
   width: 100%;
-  margin: 1rem;
+  padding: 1rem;
   position: relative;
   overflow: hidden;
   border-top: var(--beige) 1px solid;
@@ -535,12 +535,12 @@ footer img {
 }
 
 footer div {
-  background-color: var(--blue-gray);
+  background-color: var(--light-blue);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  color: var(--blanc);
+  color: var(--beige);
   gap: 15px;
 }
 
