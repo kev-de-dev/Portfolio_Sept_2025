@@ -6,12 +6,12 @@ const slides = [
   {
     image: "slide1.jpg",
     //  image: "slide.jpg", =Chemin de l'image associée à cette diapositive.
-    tagLine: "plus de 10 ans d'éxperiences<span>en Support Technique</span>",
+    tagLine: "plus de 10 ans d'expériences<span>en Support Technique</span>",
     // propriétés :Tagline
   },
   {
     image: "slide2.jpg",
-    tagLine: "De Office 2007<span>vers Office 365</span>",
+    tagLine: "Office 2007<span>vers Office 365</span>",
   },
   {
     image: "slide3.jpg",
