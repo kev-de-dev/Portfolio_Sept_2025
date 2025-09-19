@@ -6,7 +6,7 @@ const slides = [
   {
     image: "slide1.jpg",
     //  image: "slide.jpg", =Chemin de l'image associée à cette diapositive.
-    tagLine: "plus de 10 ans d'expériences<span>en Support Technique</span>",
+    tagLine: "plus de 10 ans d'expérience<span>en Support Technique</span>",
     // propriétés :Tagline
   },
   {
